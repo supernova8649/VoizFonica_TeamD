@@ -1,0 +1,198 @@
+<!-- <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+    <div class="padding">
+    <div class="row">
+    <div class="container-fluid d-flex justify-content-center">
+    <div class="col-sm-8 col-md-6">
+    <div class="card">
+    <div class="card-header">
+    <div class="row">
+    <div class="col-md-6"><b>CREDIT/DEBIT CARD PAYMENT</b></div>
+    <div class="col-md-6 text-right" style="margin-top: -5px;"> <img src="https://img.icons8.com/color/36/000000/visa.png"> <img src="https://img.icons8.com/color/36/000000/mastercard.png"> <img src="https://img.icons8.com/color/36/000000/amex.png"> </div>
+    </div>
+    </div>
+    <div class="card-body" style="height: 350px">
+    <div class="form-group"> <label for="cc-number" class="control-label"><b>CARD NUMBER</b></label> <input id="cc-number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required></div>
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group"> <label for="cc-exp" class="control-label"><b>CARD EXPIRY</b></label> <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required> </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group"> <label for="cc-cvc" class="control-label"><b>CARD CVC</b></label> <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required> </div>
+    </div>
+    </div>
+    <div class="form-group"> <label for="numeric" class="control-label"><b>CARD HOLDER NAME</b></label> <input type="text" class="input-lg form-control"> </div>
+    <div class="form-group"> <input value="MAKE PAYMENT" type="button" onclick=""class="btn btn-success btn-lg form-control" style="font-size: .90;"> </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </body> -->
+
+    
+<!--end here-->
+
+
+<!-- Bootstrap Static Header -->
+
+<!--payment page-->
+<div style=" background-image: url('../../assets/pay.jpg')" class="jumbotron bg-cover text-dark">
+    <div class="container py-0 text-center">
+        <!-- <h1 class="display-4 font-weight-bold">PayMart</h1> -->
+        <p class="font-italic mb-0"><b>"VoizFonicaPayMart has turned to be the perfect payment solution for us.</b><br>
+            <b>Our customers demand convinience and security.</b><br>
+            <b>VoizFonicaPayMart delivers on both without compromise."</b></p>
+        <!-- <p class="font-italic">Snippe by
+            <a href="https://bootstrapious.com" class="text-white">
+                <u>Bootstrapious</u>
+            </a>
+        </p> -->
+        <!-- <a href="#" role="button" class="btn btn-primary px-5">See All Features</a> -->
+
+        <div class="container py-5">
+
+            <!-- For demo purpose -->
+            <!-- <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+              <h1 class="display-4">Bootstrap 4 credit card form</h1>
+              <p class="lead mb-0">Easily build a well-structured credit card form using Bootstrap 4</p>
+              <p class="lead">Snippet by <a href="https://bootstrapious.com/snippets">Bootstrapious</a></p>
+            </div>
+          </div> -->
+            <!-- End -->
+
+            <div class="row">
+                <div class="col-lg-7 mx-auto">
+                    <div class="bg-white rounded-lg shadow-sm p-5">
+                        <h1>hello</h1>
+                        <!-- Credit card form tabs -->
+                        <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                            <li class="nav-item">
+                                <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                    <i class="fa fa-credit-card"></i>
+                                    Debit card
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="pill" href="#nav-tab-card" class="nav-link rounded-pill">
+                                    <i class="fa fa-credit-card"></i>
+                                    Credit card
+                                </a>
+                            </li>
+                             <li class="nav-item">
+                    <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                                        <i class="fa fa-university"></i>
+                                         Netbanking
+                                     </a>
+                                     
+                  </li>  
+                        </ul>
+                        <!-- End -->
+
+
+                        <!-- Credit card form content -->
+                        <div class="tab-content">
+                           
+
+                            <!-- credit card info-->
+                            <div id="nav-tab-card" class="tab-pane fade show active">
+                                <!-- <p class="alert alert-success">Some text success or error</p> -->
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label for="username">Amount</label>
+                                        <span class="input-group-text"><i class="fas fa-rupee-sign"></i></span>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <label for="username">Full name (on the card)</label>
+                                        <input type="text" name="username" placeholder="Your name" required
+                                            class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardNumber">Card number</label>
+                                        <div class="input-group">
+                                            <!-- <input type="text" name="cardNumber" placeholder="Your card number"
+                                                class="form-control" required> -->
+                                                <input type="cardNumber" class="form-control p-12" placeholder="Enter card number" #cardNumber="ngModel"
+                                                    name="cardNumber" ngModel pattern="[0-9]{16}" [class.is-invalid]="cardNumber.invalid && cardNumber.touched" />
+                                                <div *ngIf="cardNumber.errors && (cardNumber.invalid||cardNumber.touched)"><br><br>
+                                                    <small class="text-danger" *ngIf="cardNumber.errors.required">card number is required</small>
+                                                    <small class="text-danger" *ngIf="cardNumber.errors.pattern">card number should contain 16 digits</small>
+                                                </div>
+                                            <!-- <div class="input-group-append">
+                                                <span class="input-group-text text-muted">
+                                                    <i class="fa fa-cc-visa mx-1"></i>
+                                                    <i class="fa fa-cc-amex mx-1"></i>
+                                                    <i class="fa fa-cc-mastercard mx-1"></i>
+                                                </span>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label><span class="hidden-xs">Expiration</span></label>
+                                                <div class="input-group">
+                                                    <input type="number" placeholder="MM" name="" class="form-control"
+                                                        required>
+                                                    <input type="number" placeholder="YY" name="" class="form-control"
+                                                        required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group mb-4">
+                                                <label data-toggle="tooltip"
+                                                    title="Three-digits code on the back of your card">CVV
+                                                    <i class="fa fa-question-circle"></i>
+                                                </label>
+                                                <!-- <input type="text" required class="form-control"> -->
+
+                            <input type="cvv" class="form-control p-12" #cvv="ngModel" name="cvv" ngModel pattern="[0-9]{3}"
+                                [class.is-invalid]="cvv.invalid && cvv.touched" />
+                            <div *ngIf="cvv.errors && (cvv.invalid||cvv.touched)"><br><br>
+                                <small class="text-danger" *ngIf="cvv.errors.required">CVV is required</small>
+                                <small class="text-danger" *ngIf="cvv.errors.pattern">CVV should contain 3 digits</small>
+                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" onclick="makePayment()"
+                                        class="subscribe btn  btn-block rounded-pill shadow-sm" style="background-color:red;color: white;"> Confirm
+                                    </button>
+                                </form>
+                                <div class="container">
+                                    <div class="row">
+
+
+
+
+
+                                        <!-- Our Special dropdown has class show-on-hover -->
+                                         <!-- <div class="btn-group show-on-hover">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                select your bank <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"> HDFC</a></li>
+                                <li><a href="#"> SBI</a></li>
+                                <li><a href="#"> ICICI</a></li> 
+                                       <li class="divider"></li> -->
+                                        <!-- <li><a href="#">Separated link</a></li> 
+                                        </ul>
+                            </div>  -->
+
+
+                                    </div>
+                                </div>
+                            </div>
+

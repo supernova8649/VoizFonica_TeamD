@@ -1,0 +1,21 @@
+/* styling for thank you page */
+h1,h2,h3.h4,p{
+text-align: center;
+color:red;
+}
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 30%;
+height:20%
+}
+p{
+font-size: large;
+}
+pre{
+font-size: large;
+}
+strong{
+color: yellow;
+}

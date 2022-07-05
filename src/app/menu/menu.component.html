@@ -1,0 +1,70 @@
+
+
+<!--navigation bar-->
+<nav class="navbar navbar-expand-lg light">
+  <ul class=" nav navbar mr-auto">
+  <!-- <li class="nav-item"> -->
+  <!-- <a class="nav-link" >VoizFonica</a> -->
+  <!-- <h3 id="iconvoiz">VoizFonica</h3> -->
+  <!-- </li> -->
+  <i class="h1 pl-4"><img class="card-img-bottom" src="../../assets/viber.png" style="height: 70px;width: 70px"
+  alt="Card image cap"></i>
+  <li class="nav-item">
+  <a class="nav-link" routerLink="/home" id="nav1" style="color:red; font-size: 25px;">Home</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" routerLink="/product" style="color:red; font-size: 25px;">Products</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" routerLink="/newconnection" style="color:red; font-size: 25px;">New connection</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" *ngIf="auth.isUserLoggedIn()" style="color:red; font-size: 25px;" routerLink="/billing">Billing</a>
+  </li>
+  
+  </ul>
+  <ul class="nav navbar navbar-collapse justify-content-end">
+  <li class="nav-item">
+  <a class="nav-link" *ngIf="!auth.isUserLoggedIn()" style="color:red; font-size: 25px;" routerLink="/login">Login</a>
+  </li>
+  
+  <!-- <li class="nav-item">
+  <a class="nav-link" style="color:red;" routerLink="/help">Help</a>
+  </li> -->
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" style="color: red; font-size: 25px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+  aria-haspopup="true" aria-expanded="false">
+  Help
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  <a class="dropdown-item" routerLink="/help" style="font-size:x-large;color: red ;font-size: 25px;" >FAQ</a>
+  <a class="dropdown-item" routerLink="/contact" style="font-size:x-large;color: red;font-size: 23px;">Contact Us</a>
+  <!-- <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">Something else here</a> -->
+  </div>
+  </li>
+  <!-- <li class="nav-item">
+  <a class="nav-link" style="color:red;" routerLink="/contact">ContactUs</a>
+  </li> -->
+  <div class="btn-group" *ngIf="auth.isUserLoggedIn()" style="height:40px;">
+  <button type="button" class="fas fa-user" data-toggle="dropdown" style="height:30px;" style="background-color: red;"></button>
+  <div class="dropdown-menu dropdown-menu-right">
+  <button class="dropdown-item" type="button" style="background-color: white; " routerLink="/dashboard"> <b style="color: red; font-size: x-large;">Dashboard</b></button>
+  <button class="dropdown-item" type="button" style="background-color: white;" routerLink="/track" ><b style="color: red; font-size: x-large;">Track Issue</b></button>
+  <button class="dropdown-item" type="button" style="background-color: white;" routerLink="/logout" ><b style="color: red; font-size: x-large;">Logout</b></button>
+  
+  <!-- <button class="dropdown-item" type="button" routerLink="/logout">help</button> -->
+  
+  </div>
+  </div>
+  </ul>
+  </nav>
+  
+  
+  
+  
+  
+  
+  
+  
+  

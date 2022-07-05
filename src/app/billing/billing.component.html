@@ -1,0 +1,233 @@
+
+<!--billing page-->
+<!--showing the bill details to the customer-->
+
+<!--billing page-->
+<!--showing the bill details to the customer-->
+<!-- <div class="text-center">
+<h5 class="text-secondary center">Your Voizfonica Bill</h5>
+</div>
+
+
+
+<div class="container">
+<div class="row">
+<div class="col-6">
+<div class="card" style="width: 70rem;">
+
+<div class="card-body">
+<h5 class="card-title"></h5>
+<h2 class="text" style="color: #E98074;">Ms.abc</h2>
+<h6>Road No.5 ,Jubilee Hills</h6>
+<h6>Saifabad,Hyderabad</h6>
+<h6>Telanagana,India</h6><br><br>
+
+</div>
+</div>
+</div>
+<div class="col-6">
+<table class="table table - bordered">
+
+<tbody>
+<tr>
+<td style="color:#E98074 ;"><B>Invoice Number</B></td>
+<td style="color:#E98074 ;"><B>Invoice Date</B></td>
+<td style="color:#E98074 ;"><B>Service Tax Number</B></td>
+<td style="color:#E98074 ;"><B>Credit Limit</B></td>
+<td style="color:#E98074 ;"><B>Invoice Period</B></td>
+</tr>
+<tr>
+<td>123456</td>
+<td>4/12/1789</td>
+<td>12564</td>
+<td>1250</td>
+<td>14-june-2019 to 15-sept-2020</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+<div class="container">
+<div class="row">
+
+<div class="col-12" >
+<br>
+<br>
+
+<table class="table table">
+<thead>
+<tr>
+<th class="text" style="color:#E98074 ;">Type of service</th>
+<th class="text" style="color:#E98074 ;">Usage</th>
+<th class="text" style="color:#E98074 ;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet Usage</td>
+<td>2 GB</td>
+<td>150</td>
+</tr>
+<tr>
+<td>Phone calls</td>
+<td>15550 sec</td>
+<td>150</td>
+</tr>
+<tr>
+<td>GST</td>
+<td>-</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Discount</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>-</td>
+<td>1500</td>
+</tr>
+
+</tbody>
+
+</table>
+
+
+</div>
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div>
+<button type="button" class="btn btn " style="background-color: #E98074;" routerLink="/payment">Proceed to Payment</button><br><br><br><br><br>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div> -->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div id="invoice">
+<div class="btn-group">
+<button type="button" class="btn btn-light dropdown-toggle" style ="background-color: red;" data-toggle="dropdown" aria-expanded="false" >
+<b style="color: white;"> select your bill</b>
+</button>
+<div class="dropdown-menu">
+<a class="dropdown-item"  target="_blank" routerLink="/billing" style="color: red">December</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">November</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">October</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">September</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">August</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">July</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">June</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">May</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">April</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">March</a>
+<a class="dropdown-item" target="_blank"  routerLink="/billing" style="color: red">February</a>
+<a class="dropdown-item" target="_blank" routerLink="/billing" style="color: red">January</a>
+
+</div>
+</div>
+<div class="invoice overflow-auto">
+<div style="min-width: 20px">
+<header>
+<div class="row">
+<div class="col">
+<i class="h1 pl-4"><img class="card-img-bottom" src="../../assets/viber.png"
+style="height: 70px;width: 120px" alt="Card image cap"></i>
+</div>
+<div class="col company-details">
+<h2 class="name">
+<a target="_blank" href="" style="color: red">
+VOIZFONICA
+</a>
+</h2>
+<div><b>1800 266 4332</b></div>
+<div><b>wecare@voizfonica.com</b></div>
+<div><b>CHENNAI, TN 600019, INDIA</b></div>
+</div>
+</div>
+</header>
+<main>
+<div class="row contacts">
+<div class="col invoice-to">
+<div class="text-gray-light"><b>INVOICE TO:</b></div>
+<h2 class="to">Mr.Henry</h2>
+<div class="address"><b>796 Kilpauk Garden, Kilpauk, Chennai-19</b></div>
+<div class="email"><a href="mailto:henry@gmail.com"
+style="color: red"><b>henry@gmail.com</b></a></div>
+</div>
+<div class="col invoice-details">
+<h1 class="invoice-id" style="font-size:larger">INVOICE 001</h1>
+<div class="date"><b>Date of Invoice: 30/11/2019</b></div>
+<div class="date"><b>Due Date: 31/12/2019</b></div>
+</div>
+</div>
+<table border="0" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+<th><b>#</b></th>
+<th class="text-left" style="font-size: large"><b>DESCRIPTION</b></th>
+<th class="text-right" style="font-size: large"><b>PRODUCT</b></th>
+<th class="text-right" style="font-size: large"><b>QUANTITY</b></th>
+<th class="text-right" style="font-size: large"><b>TOTAL</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="no"><b>01</b></td>
+<td class="text-left">
+<h3>
+<a style="color: red"><b>1.5 GB/Day+Free 30min call</b></a>
+</h3>
+</td>
+<td class="unit"><b>Prepaid</b></td>
+<td class="qty"><b>1</b></td>
+<td class="total"><b>399</b></td>
+</tr>
+
+<tr>
+<td class="no"><b>02</b></td>
+<td class="text-left">
+<h3>
+<a style="color: red"><b>STD calls Unlimited + NetFlix Subscription free for 3
+months + AmazonPrime Subscription free for a month
+</b> </a>
+</h3>
+</td>
+<td class="unit"><b>Postpaid</b></td>
+<td class="qty"><b>2</b></td>
+<td class="total"><b>1598</b></td>
+</tr>
+
+</tbody>
+<tfoot>
+<tr>
+<td colspan="2"></td>
+<td colspan="2" style="color: red"><b>GST 18%</b></td>
+<td style="color: red"><b>Rs.359</b></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td colspan="2"><b>TOTAL</b></td>
+<td><b>Rs.2356</b></td>
+</tr>
+</tfoot>
+</table><br><br>
+<div class="thanks" style="color: red"><b>Thank you!</b></div>
+</main>
+<footer>
+This is a computer generated invoice,hence no signature is required.
+</footer>
+</div>
+</div>
+</div>

@@ -1,0 +1,20 @@
+
+
+/*styling for the menu bar*/
+a{
+
+  font-size:35px;
+  font-weight: bold;
+  }
+  
+  .navbar{
+  background-color:white;
+  
+  }
+  #iconvoiz{
+  font-family: 'Seymour One', sans-serif;
+  color:#E85A4F ;
+  }
+  #nav1{
+  font-size: 35px;
+  }

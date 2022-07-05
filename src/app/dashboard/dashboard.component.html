@@ -1,0 +1,92 @@
+<!--showing the customer's dashboard -->
+<!--showing the customer's dashboard -->
+<div class="row">
+
+  <div class="col-lg-4">
+  <div class="inforide" style="margin:10px;border: 2px solid black;">
+  <div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+  <img src="../../assets/viber.png" width="80">
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+  <h4 class="text" style="color: red;">Product Category</h4>
+  <h2>Prepaid</h2>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="col-lg-4">
+  <div class="inforide" style="margin:10px;border: 2px solid black;">
+  <div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridetwo">
+  <img src="../../assets/viber.png" width="80">
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+  <h4 class="text" style="color: red;"> Daily Data Usage</h4>
+  <h2>70% Completed</h2>
+  
+  
+  </div>
+  
+  </div>
+  </div>
+  </div>
+  
+  <div class="col-lg-4 ">
+  <div class="inforide" style="margin:10px;border: 2px solid black;">
+  <div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-4 col-4 ridethree">
+  <img src="../../assets/viber.png" width="80">
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+  <h4 class="text" style="color: red;">Call Usage</h4>
+  <h2>150000 sec left</h2>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br><br>
+  
+  <div class="row">
+  <div class="col-lg-4">
+  <img src="../../assets/profile.png" alt="" class="img-rounded" style="height: 300px;margin-left:150px;">
+  </div>
+  <!-- <div class="col-lg-4">
+  <h3 class="mx-auto" style="text-align:center; color: red;">Lakshmi Sridhar</h3>
+  </div> -->
+  <div class="col-lg-4">
+  <h3 class="mx-auto" style="text-align:center; color: red;">Lakshmi Sridhar</h3>
+  <table class="table table-hover" border="5">
+  <tbody>
+  <tr *ngFor="let i of user">
+  <td><B>Aadhaar Number</B></td>
+  <td><B>{{i.customer_aadhar}}</B></td>
+  </tr>
+  <tr *ngFor="let i of user">
+  <td><B>Email Address</B></td>
+  <td><B>{{i.customerEmail}}</B></td>
+  </tr>
+  <tr *ngFor="let i of user">
+  <td><B>Gender</B></td>
+  <td><B>{{i.gender}}</B></td>
+  </tr>
+  <tr *ngFor="let i of user">
+  <td> <B>Address</B></td>
+  <td><B>{{i.customerAddress1}},{{i.customerAddress2}}</B></td>
+  </tr>
+  <tr *ngFor="let i of user">
+  <td><B>Mobile Number</B></td>
+  <td><B></B> <br><br>
+  </td>
+  
+  </tr>
+  
+  </tbody>
+  </table>
+  
+  </div>
+  </div>
+  
+  <!-- ends here -->

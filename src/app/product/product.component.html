@@ -1,0 +1,281 @@
+<br><br>
+<!--<div class="container">
+    <h1 style="text-align: center;">Products</h1>
+    <div class="row" >
+      
+          
+        <div class="col-lg-4">
+              <div class="card" style="width:20rem;height: 30rem;">
+                      <img src="../../assets/Prepaid.png"   style="height:250px;width:18rem;margin-left:auto;margin-right: auto;">
+                      <div class="card-body" style="padding-left:20px;">
+                        <h4 style="text-align: center;">Prepaid</h4>
+                        
+                        <button type="button" class="btn btn-primary" routerLink="/prepaid">Click here for Plans </button><br><br>
+                        <p class="card-text" style="font-size: 25px;color:chocolate;text-align: center;">Pay-as-you-go</p>
+                      </div>
+              </div>
+        </div>
+        
+        <div class="col-lg-4">
+            
+              <div class="card" style="width: 20rem;height: 30rem;">
+                  
+                      <img src="../../assets/postpaid.png" style="height:250px;">
+                      <div class="card-body">
+                        <h4 style="text-align: center;">Postpaid</h4>
+                        
+                        <button type="button" class="btn btn-primary" routerLink="/postpaid">Click here for Plans </button><br><br>
+                        <p class="card-text" style="font-size: 25px;color:chocolate;text-align: center;">Talk More </p>
+                      </div>
+              </div>
+
+             
+        </div>
+        <div class="col-lg-4">
+              <div class="card" style="width: 20rem;height: 30rem;">
+                      <img src="../../assets/Dongle.png"  style="height:250px;">
+                      <div class="card-body">
+                        <h4 style="text-align: center;">Dongle</h4>
+                        
+                        <button type="button" class="btn btn-primary" routerLink="/dongle">Click here for Plans</button><br><br>
+                        <p class="card-text" style="font-size: 25px;color:chocolate;text-align: center;">Pocket Wi-Fi hotspots</p>
+                      </div>
+              </div>
+
+            
+        </div>
+
+      </div>
+    </div>-->
+  <!-- <div class="container">
+      <div class="nav nav-tabs">
+      <div class="row">
+        <div class="col-sm">
+          <a class="nav-link active" >Prepaid</a>
+        </div>
+        <div class="col-sm">
+          <a class="nav-link active" >Postpaid</a>
+        </div>
+        <div class="col-sm">
+          <a class="nav-link active" >Dongle</a>
+        </div>
+      </div>
+    </div>
+    </div>-->
+
+    <!--<div class="col-md-8">
+      <div class="tab-content profile-tab" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>User Id</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>Kshiti123</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Name</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>Kshiti Ghelani</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Email</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>kshitighelani@gmail.com</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Phone</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>123 456 7890</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Profession</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p>Web Developer and Designer</p>
+                          </div>
+                      </div>
+          </div>-->
+          
+          <section id="tabs" class="project-tab"  >
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Prepaid</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Postpaid</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Dongle</a>
+                            </div>
+                        </nav>
+                        <!--showing the prepaid plans to the customer-->
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><br><br>
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                       
+                                            <th>Plan</th>
+                                            <th>Description</th>
+                                            <th>Validity</th>
+                                            <th></th>
+                                         
+                                       
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor='let plan of prepaid' scope="row">
+                                        <td style="color: red;font-size: larger;">Rs.{{ plan.prepaidId }}</td>
+                                        <td style="color: red;font-size: larger;">{{ plan.prepaidDescription }}</td>
+                                        <td style="color: red;font-size: larger;">{{ plan.prepaidValidity }} Days</td> 
+                                        <td><button type="button" class="btn " style="background-color: red;" (click)="PrepaidPlanMethod(plan)"><b style="color: white;">Buy</b></button></td>
+
+
+                                      </tr>
+                                    
+                                        <!-- <tr>
+                                          
+                                            <td>Rs.599</td>
+                                            <td>1.5 GB/Day + MusicApp premium free for a month</td>
+                                            <td>86 Days</td>
+                                            <td><button type="button" class="btn"  style="background-color: #D8C3A5;" routerLink="/payment" >Buy</button></td>
+                                        
+                                        </tr>
+                                        <tr>
+                                          <td>Rs.2319</td>
+                                          <td>2 GB/Day + MusicApp premium free for 3 months</td>
+                                          <td>365 Days</td>
+                                          <td><button type="button" class="btn"  style="background-color: #D8C3A5;" routerLink="/payment" >Buy</button></td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--showing the postpaid plans to the customer-->
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><br><br>
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Plan</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor='let plan of postpaid' scope="row">
+                                        <td style="color: red;font-size: larger;">Rs.{{ plan.postpaidId }}(Monthly Rental)</td>
+                                        <td style="color: red;font-size: larger;">{{ plan.postpaidDescription }}</td>
+                                         
+                                        <td><button type="button" class="btn " style="background-color:red;"  routerLink="/payment"><b style="color: white;">Buy</b></button></td>
+
+
+                                      </tr>
+                                        <!-- <tr>
+                                          <td>Rs.799 (Monthly Rental)</td>
+                                          <td>STD calls Unlimited + NetFlix Subscription free for 3 months + AmazonPrime Subscription free for a month </td>
+                                          <td><button type="button" class="btn"  style="background-color: #D8C3A5;" routerLink="/payment" >Buy</button></td>
+                                        </tr>
+                                        <tr>
+                                          <td>Rs.999 (Monthly Rental)</td>
+                                          <td>STD calls Unlimited + NetFlix Subscription free for 6 months + 2 Family add-ons free</td>
+                                          <td><button type="button" class="btn"  style="background-color: #D8C3A5;" routerLink="/payment" >Buy</button></td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--showing the dongle plans to the customer-->
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><br><br>
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Plan</th>
+                                            <th>Description</th>
+                                            <th>Validity</th>
+                                            <th></th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor='let plan of dongle' scope="row">
+                                        <td style="color: red;font-size: larger;">Rs.{{ plan.dongleId }}</td>
+                                        <td style="color: red;font-size: larger;">{{ plan.dongleDescription }}</td>
+                                        <td style="color: red;font-size: larger;">{{ plan.dongleValidity }} Months</td> 
+                                        <td><button type="button" class="btn " style="background-color: red;"  routerLink="/payment"><b style="color: white;">Buy</b></button></td>
+
+
+                                      </tr>
+                                        <!-- <tr>
+                                          <td>Rs.509 (168 GB)</td>
+                                          <td>2GB Data/Month</td>
+                                          <td>4 months</td>
+                                          <td><button type="button" class="btn "  style="background-color: #D8C3A5;" routerLink="/payment" >Buy</button></td>
+                                        </tr>
+                                        <tr>
+                                          <td>Rs.999 (120 GB)</td>
+                                          <td>No Daily data limit</td>
+                                          <td>2 months</td>
+                                          <td><button type="button" class="btn "  style="background-color: #D8C3A5;" routerLink="/payment" >Buy</button></td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="top-content">
+              <h2 style="text-align: center;">Explore Various benefits that worth over <i class="fas fa-rupee-sign"></i> 2000 </h2>
+              <br>
+              <div class="container-fluid">
+              <div id="carousel-example" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner row w-100 mx-auto" role="listbox">
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+              <img src="../../assets/pro61.png" class="img-fluid mx-auto d-block" alt="img1">
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <img src="../../assets/pro62.png" class="img-fluid mx-auto d-block" alt="img2">
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <img src="../../assets/pro63.png" class="img-fluid mx-auto d-block" alt="img3">
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <img src="../../assets/pro64.png" class="img-fluid mx-auto d-block" alt="img4">
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <img src="../../assets/pro68.jpg" class="img-fluid mx-auto d-block" alt="img5">
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <img src="../../assets/pro66.jpg" class="img-fluid mx-auto d-block" alt="img6">
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <img src="../../assets/pro67.jpg" class="img-fluid mx-auto d-block" alt="img7">
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+              <img src="../../assets/pro68.jpg" class="img-fluid mx-auto d-block" alt="img8">
+              </div>
+              </div>
+              <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+              </a>
+              </div>
+              </div>
+              </div>
+
+
+        </section>
+       

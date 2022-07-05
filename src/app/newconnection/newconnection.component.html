@@ -1,0 +1,93 @@
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+    <nav class="navbar navbar-expand-lg ">
+    <ul class=" nav navbar mr-auto">
+    
+    <i class="h1 pl-4"><img class="card-img-bottom" src="../../assets/vLOGO.png" style="height: 70px;width: 120px"
+    alt="Card image cap"></i>
+    </ul>
+    <ul class="nav navbar navbar-collapse justify-content-end">
+    <li class="nav-item">
+    <a class="nav-link" style="color: red;font-size: x-large;">Get your product home delivered</a>
+    </li>
+    
+    
+    <div class="btn-group" *ngIf="auth.isUserLoggedIn()">
+    <button type="button" class="fas fa-user" data-toggle="dropdown" style="background-color:whitesmoke;height:30px;" ></button>
+    
+    </div>
+    </ul>
+    </nav>
+    
+    
+    <form newConnectionForm="ngForm">
+    <div class="container register">
+    <div class="row">
+    <div class="col-md-3 register-left">
+    <img src="../../assets/new.png" alt=""/>
+    <h3>Connect with us!</h3>
+    <p style="font-size: x-large;"><b>You are just seconds away from connecting with us</b></p>
+
+    
+    </div>
+    <div class="col-md-9 register-right">
+    
+    <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <h3 class="register-heading">Connect with us</h3>
+    <div class="row register-form">
+    <div class="col-md-6">
+    <div class="form-group">
+    <input type="text" class="form-control" id="name" placeholder=" First Name " value="" required name="name" [(ngModel)]="connection.customerName" ngModel>
+    </div>
+    <div class="form-group">
+    <input type="text" class="form-control" id="uname" placeholder="Last Name " value="" name="uname" required ngModel/>
+    </div>
+    
+    <div class="form-group">
+    <input type="number" minlength="10" maxlength="10" id="aadharNo" class="form-control" placeholder="Your Aadhar number " value="" data-toggle="tooltip" required name="aadharNo" [(ngModel)]="connection.customerAadhaar" ngModel pattern="[0-9]{12}" #aadharno="ngModel" [class.is-invalid]="aadharno.invalid && aadharno.touched" />
+    
+    <div *ngIf="aadharno.errors && (aadharno.invalid||aadharno.touched)">
+    <small class="text-danger" *ngIf="aadharno.errors.required">Aadhar number is
+    required</small>
+    <small class="text-danger" *ngIf="aadharno.errors.pattern">Aadhar number should be
+    12 digits</small>
+    </div>
+    </div>
+    <div class="form-group">
+    <input type="radio" name="products" value="Prepaid" checked [(ngModel)]="connection.productType" ngModel required> Prepaid<br>
+    <input type="radio" name="products" value="Postpaid" [(ngModel)]="connection.productType" ngModel required> Postpaid<br>
+    <input type="radio" name="products" value="Dongle" [(ngModel)]="connection.productType" ngModel required> Dongle
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    
+    <input type="text" class="form-control" id="address" placeholder="Enter your street name" name="address" required  ngModel>
+    </div>
+    <div class="form-group">
+    
+    <input type="text" class="form-control" id="city" placeholder="Enter your city" name="city"  required ngModel>
+    </div>
+    
+    <div class="form-group">
+    <input type="number" class="form-control" id="pincode" placeholder="Enter Your pincode *" value="" data-toggle="tooltip" required name="pincode"  ngModel/>
+    </div>
+    <br>
+    
+    <div class="form-group">
+    <input type="checkbox" name="checkbox" required > I agree to the terms and conditions
+    </div>
+    <!-- <button type="submit" class="btn btn-primary"  value="Register" [disabled]="newConnectionForm.invalid"   (click)="createNewConnection()" routerLink="/login" >Get Connection</button> -->
+    <button type="button" class="btn btn" style="background-color:red;" [disabled]="newConnectionForm.invalid" (click)="createNewConnection()" routerLink="/login" ><b style="color: white; font-size: x-large;"> Get Connection</b></button>
+    </div>
+    
+    </div>
+    <br><br>

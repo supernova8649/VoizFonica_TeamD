@@ -1,0 +1,131 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- </body> -->
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Welcome to VoizFonica</h3>
+                <p>You are just seconds from entering our world</p>
+            </div>
+            <div class="col-md-9 register-right">
+                <form #registerForm="ngForm">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">User Registration</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder=" First Name "
+                                            value="" required name="name" [(ngModel)]="user.customerName" ngModel>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="uname" placeholder="Last Name "
+                                            value="" required name="uname" [(ngModel)]="user.customerLName" ngModel />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Password " value="" required data-toggle="tooltip" required
+                                            name="password" [(ngModel)]="user.password" ngModel>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="cnfrmpasswd"
+                                            placeholder="Confirm Password " value="" required data-toggle="tooltip"
+                                            required name="cnfrmpassword" [(ngModel)]="user.confirmPassword" ngModel />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Gender: </label>
+                                        <input type="text" minlength="12" maxlength="12" id="aadharNo" class="form-control" placeholder="Your Aadhar number "
+                                            value="" data-toggle="tooltip" required name="aadharNo" [(ngModel)]="user.customer_aadhar" ngModel
+                                            pattern="[0-9]{12}" #aadharno="ngModel" [class.is-invalid]="aadharno.invalid && aadharno.touched" />
+                                        <div *ngIf="aadharno.errors && (aadharno.invalid||aadharno.touched)">
+                                            <small class="text-danger" *ngIf="aadharno.errors.required">Aadhar number is
+                                                required</small>
+                                            <small class="text-danger" *ngIf="aadharno.errors.pattern">Aadhar number
+                                                should be 12 digits</small>
+                                        </div>
+                                        <div class="maxl">
+                                            <label class="radio inline">
+                                                <input type="radio" id="gender" value="male" required name="male"
+                                                    [(ngModel)]="user.gender" ngModel>
+                                                <span> Male </span>
+                                            </label>
+                                            <label class="radio inline">
+                                                <input type="radio" id="gender" value="female" required name="female"
+                                                    [(ngModel)]="user.gender" ngModel>
+                                                <span>Female </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email " value=""
+                                                id="email" data-toggle="tooltip" required name="email"
+                                                #emailId="ngModel" [(ngModel)]="user.customerEmail" ngModel
+                                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                                [class.is-invalid]="emailId.invalid && emailId.touched" />
+                                            <div *ngIf="emailId.errors && (emailId.invalid||emailId.touched)">
+                                                <small class="text-danger" *ngIf="emailId.errors.required">Email Id is
+                                                    required</small>
+                                                <small class="text-danger" *ngIf="emailId.errors.pattern">Email Id
+                                                    should not contain any special characters at the end</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Products:</label>
+                                        <br>
+                                        <input type="radio" name="Products" value="Prepaid" required checked ngModel
+                                            [(ngModel)]="user.product"> Prepaid
+                                        <input type="radio" name="Products" value="PostPaid" required ngModel
+                                            [(ngModel)]="user.product"> PostPaid
+                                        <input type="radio" name="Products" value="Dongle" required ngModel
+                                            [(ngModel)]="user.product"> Dongle
+                                    </div>
+                                    <br>
+                                     <div class="form-group">
+                                        <input type="text" class="form-control" id="address1"
+                                            placeholder="Flat/House No./Building" name="address1"
+                                            [(ngModel)]="user.customerAddress1" ngModel required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="address2"
+                                            placeholder="Colony/Street/Locality" name="address2"
+                                            [(ngModel)]="user.customerAddress2" ngModel required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="city" placeholder="Enter your city"
+                                            name="city" [(ngModel)]="user.customerCity" ngModel required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" id="pincode"
+                                            placeholder="Enter Your pincode " value="" data-toggle="tooltip" required
+                                            name="pincode" [(ngModel)]="user.pincode" ngModel />
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="checkbox" ngModel [(ngModel)]="user.checkbox" required> I agree to the terms
+                                        and conditions 
+                                    </div>
+                                    <button type="submit" class="btn btn" style="background-color:red;"
+                                        [disabled]="registerForm.invalid" (click)="createUser()" routerLink="uniqueCheck=='true'? /login"><b
+                                            style="color: white; font-size: x-large;"> Register</b></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
